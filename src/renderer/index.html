@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>CAPIT - Conexion IT Capacitaciones</title>
+  <link rel="stylesheet" href="css/theme.css" />
+</head>
+<body>
+  <div class="topbar">
+    <h1>CAPIT — Conexion IT Capacitaciones</h1>
+  </div>
+
+  <div class="container">
+    <div class="card" style="margin-bottom:20px;">
+      <h2>Empezar</h2>
+      <p style="color:var(--muted)">Graba una ventana o pantalla y CAPIT captura cada paso automaticamente.</p>
+      <button class="btn btn-success" id="btnNueva">Nueva grabacion</button>
+      <button class="btn btn-secondary" id="btnAbrir">Abrir proyecto existente</button>
+    </div>
+
+    <div id="picker" class="card" style="display:none;">
+      <h2>Elige que grabar</h2>
+      <div id="sourcesGrid" class="grid"></div>
+      <div style="margin-top:16px;">
+        <button class="btn btn-primary" id="btnIniciar" disabled>Iniciar grabacion</button>
+        <button class="btn btn-secondary" id="btnCancelar">Cancelar</button>
+      </div>
+      <p style="color:var(--muted); font-size:13px;">
+        Para detener la grabacion en cualquier momento: <b>Ctrl+Shift+S</b>
+      </p>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
