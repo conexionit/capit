@@ -1,0 +1,8 @@
+Coloca aqui un archivo icon.ico (256x256 recomendado) con el logo de
+Conexion IT antes de correr "npm run dist".
+
+Si no agregas un icono, el empaquetador de CAPIT usa uno generico por
+defecto y el instalador funciona igual, solo que sin el logo de la empresa.
+
+Herramienta gratuita para convertir tu logo PNG a .ico:
+https://convertio.co/es/png-ico/
