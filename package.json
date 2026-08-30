@@ -8,8 +8,8 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "start": "electron .",
-    "dist": "electron-builder"
+    "start": "node scripts/start.js",
+    "dist": "node scripts/dist.js"
   },
   "dependencies": {
     "docx": "^9.0.2",
