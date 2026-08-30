@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>CAPIT - Editor</title>
+  <link rel="stylesheet" href="css/theme.css" />
+  <style>
+    .editor-wrap { display: flex; height: calc(100vh - 56px); }
+    .sidebar-steps {
+      width: 220px; background: #fff; border-right: 1px solid var(--border);
+      overflow-y: auto; padding: 12px;
+    }
+    .step-item {
+      border: 2px solid var(--border); border-radius: 8px; margin-bottom: 10px;
+      cursor: pointer; overflow: hidden;
+    }
+    .step-item.active { border-color: var(--blue); }
+    .step-item img { width: 100%; display: block; }
+    .step-item .n { padding: 4px 8px; font-size: 12px; color: var(--muted); }
+
+    .canvas-area { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 16px; overflow: auto; background: var(--bg); }
+
+    .tools { width: 220px; background: #fff; border-left: 1px solid var(--border); padding: 12px; }
+    .tools button { width: 100%; margin-bottom: 8px; }
+    .tools label { font-size: 12px; color: var(--muted); display:block; margin-top:12px; }
+    .tools input[type="color"] { width: 100%; height: 32px; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <h1>CAPIT — Editor</h1>
+    <div>
+      <button class="btn btn-secondary" id="btnExportDocx">Exportar Word</button>
+      <button class="btn btn-secondary" id="btnExportPdf">Exportar PDF</button>
+      <button class="btn btn-success" id="btnExportVideo">Exportar Video</button>
+    </div>
+  </div>
+
+  <div class="editor-wrap">
+    <div class="sidebar-steps" id="stepsList"></div>
+
+    <div class="canvas-area">
+      <canvas id="fabricCanvas" width="1000" height="625"></canvas>
+      <textarea id="stepTexto" placeholder="Descripcion de este paso (para el documento)..."
+        style="width:1000px; margin-top:10px; height:60px;"></textarea>
+    </div>
+
+    <div class="tools">
+      <h3>Capas</h3>
+      <button class="btn btn-primary" id="toolText">+ Texto</button>
+      <button class="btn btn-primary" id="toolArrow">+ Flecha</button>
+      <button class="btn btn-primary" id="toolRect">+ Resaltado</button>
+      <button class="btn btn-primary" id="toolNumber">+ Numero de paso</button>
+      <button class="btn btn-primary" id="toolBlur">+ Ocultar dato (blur)</button>
+      <button class="btn btn-secondary" id="toolDelete">Eliminar capa seleccionada</button>
+
+      <label>Color</label>
+      <input type="color" id="colorPicker" value="#185FA5" />
+
+      <label>Duracion en video (segundos)</label>
+      <input type="number" id="stepDuracion" min="1" max="30" value="3" style="width:100%; padding:6px;" />
+
+      <button class="btn btn-success" id="btnGuardar" style="margin-top:20px;">Guardar paso</button>
+    </div>
+  </div>
+
+  <script src="js/editor.js"></script>
+</body>
+</html>
