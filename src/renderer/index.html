@@ -18,15 +18,23 @@
       <button class="btn btn-secondary" id="btnAbrir">Abrir proyecto existente</button>
     </div>
 
+    <div id="modeChooser" class="card" style="display:none; margin-bottom:20px;">
+      <h2>¿Qué quieres grabar?</h2>
+      <button class="btn btn-primary" id="btnModoVentana">Una ventana completa</button>
+      <button class="btn btn-primary" id="btnModoArea">Un área de la pantalla</button>
+      <button class="btn btn-secondary" id="btnCancelarModo">Cancelar</button>
+    </div>
+
     <div id="picker" class="card" style="display:none;">
-      <h2>Elige que grabar</h2>
+      <h2>Elige la ventana</h2>
       <div id="sourcesGrid" class="grid"></div>
       <div style="margin-top:16px;">
-        <button class="btn btn-primary" id="btnIniciar" disabled>Iniciar grabacion</button>
+        <button class="btn btn-primary" id="btnIniciar" disabled>Iniciar grabación</button>
         <button class="btn btn-secondary" id="btnCancelar">Cancelar</button>
       </div>
       <p style="color:var(--muted); font-size:13px;">
-        Para detener la grabacion en cualquier momento: <b>Ctrl+Shift+S</b>
+        Verás un marco azul sobre lo que se está grabando, y un panel flotante
+        con pasos capturados, pausa y detener.
       </p>
     </div>
   </div>
